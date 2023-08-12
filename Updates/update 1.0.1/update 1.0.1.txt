@@ -1,0 +1,40 @@
+- Menu items not clicking on some mobile devices
+
+
+Please follow the instructions bellow to do the update. (Remember to backup your files before you do any changes)
+
+
+/************************************************************************************************
+ *
+ * Manual update (Recommended if you have done changes to the files that need to be updated)
+ *
+ ************************************************************************************************/
+
+-----------------------------------------------------------------------------------------
+- Menu items not clicking on some mobile devices
+-----------------------------------------------------------------------------------------
+
+Copy the function "navigation" of the file scripts.js (inside update folder) and replace the function with the same name on your existing scripts.js file.
+Copy the file common.js (inside update folder) into your existing js folder.
+
+
+
+
+
+
+
+
+
+/************************************************************************************************
+ *
+ * Automatic update (Only if you haven't made any changes to the files that need to be updated)
+ *
+ ************************************************************************************************/
+ 
+Simply copy the files in the update folder to the folder of your project.
+
+
+
+
+
+If you have any questions, feel free to contact us trough our ThemeForest profile at http://themeforest.net/user/WiselyThemes.

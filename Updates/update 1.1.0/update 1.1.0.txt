@@ -1,0 +1,107 @@
+- Fix: CSS for the Retina version of divider bottom 2
+- Fix: Special characters in conctact form
+- New: Changed Hero background video from Flash to HTML5 (index-video.html)
+
+Please follow the instructions bellow to do the update. (Remember to backup your files before you do any changes)
+
+
+/************************************************************************************************
+ *
+ * Manual update (Recommended if you have done changes to the files that need to be updated)
+ *
+ ************************************************************************************************/
+
+-----------------------------------------------------------------------------------------
+- Fix: CSS for the Retina version of divider bottom 2
+-----------------------------------------------------------------------------------------
+
+Add the following CSS to the bottom of your CSS/LESS file:
+
+@media (min-resolution: 144dpi) {
+	.divider-bottom-2.divider-pattern::before{
+
+		height: 1564px;
+ 
+	}
+}
+
+
+
+
+-----------------------------------------------------------------------------------------
+- Fix: Special characters in conctact form
+-----------------------------------------------------------------------------------------
+
+Copy the function contactForm from the new scripts.js and replace on your current scripts.js file.
+
+
+
+
+-----------------------------------------------------------------------------------------
+- New: Changed Hero background video from Flash to HTML5 (index-video.html)
+-----------------------------------------------------------------------------------------
+
+1- Add the following CSS to the bottom of your CSS/LESS file:
+
+.background-video{
+  
+  position: fixed;
+
+  top: 50%;
+
+  left: 50%;
+
+  min-width: 100%;
+
+  min-height: 100%;
+
+  width: auto;
+
+  height: auto;
+
+  z-index: -100;
+
+  transform: translateX(-50%) translateY(-50%);
+
+  background-size: cover;
+
+  transition: 1s opacity;
+
+}
+
+
+2- Remove the old video JS at the bottom of your HTML file. Keep just the following code:
+
+<!-- Hero Video Background Scripts -->
+<script type="text/javascript">
+    hero100PercentHeight = true; //Set hero height to 100% of window height
+</script>
+
+
+3- Add the HTML5 markup right after the opening of the section with id "home" like this:
+
+<section id="home" class="divider-bottom-1">
+    <video poster="images/your_poster_name.jpg" class="background-video" playsinline autoplay muted loop>
+        <source src="images/your_video_name.mp4" type="video/mp4">
+    </video>
+    ...
+
+
+Remember to change both poster and video names in the code above.
+
+
+
+
+/************************************************************************************************
+ *
+ * Automatic update (Only if you haven't made any changes to the files that need to be updated)
+ *
+ ************************************************************************************************/
+ 
+Simply copy the files in the update folder to the folder of your project.
+
+
+
+
+
+If you have any questions, feel free to contact us trough our ThemeForest profile at http://themeforest.net/user/WiselyThemes.
