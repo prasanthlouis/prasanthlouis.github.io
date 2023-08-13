@@ -1560,7 +1560,7 @@ fieldset[disabled] .btn.ribbon.active {
   min-height: 55px;
 }
 .hero-title small {
-  font-size: 36pt;
+  font-size: 24pt;
 }
 .hero-title span:first-child:before {
   content: "c";
@@ -4897,7 +4897,7 @@ div.dark_square #pp_full_res .pp_inline {
 }
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 36pt;
+    font-size: 24pt;
     margin-bottom: 15px;
   }
   .hero-title span:first-child:before {
@@ -4925,7 +4925,7 @@ div.dark_square #pp_full_res .pp_inline {
     font-size: 14pt;
   }
   h1.section-title {
-    font-size: 36pt;
+    font-size: 24pt;
   }
   .invite .invite_authors {
     font-size: 69pt;
