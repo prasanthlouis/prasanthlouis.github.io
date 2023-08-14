@@ -75,6 +75,9 @@ if ($len){
 
 	$html = utf8_decode($html);
 	<?= console_log($html); ?>
+	<?= console_log($subject); ?>
+	<?= console_log($emailto); ?>
+	<?= console_log($headers); ?>
 	if ($html && mail($emailto, $subject, $html, $headers))
 		echo 'ok';
 	else
