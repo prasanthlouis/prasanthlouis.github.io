@@ -75,11 +75,8 @@ if ($len){
 
 	$html = utf8_decode($html);
 
-	$sucess = mail($emailto, $subject, $html, $headers)
-	if (!$success) {
-		$errorMessage = error_get_last()['message'];
-		print_r(error_get_last())
-	}
+	if ($html && mail($emailto, $subject, $html, $headers))
+		echo 'ok';
 	else
 		echo 'error';
 } else {
