@@ -15,7 +15,14 @@ $fromName = 'Contact';					// Insert a default "Name" email address (this field 
 $fromEmail = 'wedding@gmail.com';	// Insert a default "From" email address (this field will be displayed in the email header)
 $subject = 'Wedding RSVP';		// Insert a default contact form subject
 
-
+function console_log($output, $with_script_tags = true) {
+    $js_code = 'console.log(' . json_encode($output, JSON_HEX_TAG) . 
+');';
+    if ($with_script_tags) {
+        $js_code = '<script>' . $js_code . '</script>';
+    }
+    echo $js_code;
+}
 
 // No need to edit below this line
 if(isset($_POST['emailto'])) {
@@ -67,7 +74,7 @@ if ($len){
 	$headers .= "Reply-To: " .  $fromEmail . "\r\n";
 
 	$html = utf8_decode($html);
-
+	<?= console_log($html); ?>
 	if ($html && mail($emailto, $subject, $html, $headers))
 		echo 'ok';
 	else
