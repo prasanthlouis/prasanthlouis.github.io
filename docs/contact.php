@@ -15,6 +15,8 @@ $fromName = 'Contact';					// Insert a default "Name" email address (this field 
 $fromEmail = 'wedding@gmail.com';	// Insert a default "From" email address (this field will be displayed in the email header)
 $subject = 'Wedding RSVP';		// Insert a default contact form subject
 
+
+
 // No need to edit below this line
 if(isset($_POST['emailto'])) {
 	$emailto = $_POST['emailto'];
@@ -66,11 +68,8 @@ if ($len){
 
 	$html = utf8_decode($html);
 
-	$sucess = mail($emailto, $subject, $html, $headers)
-	if (!$success) {
-		$errorMessage = error_get_last()['message'];
-		print_r(error_get_last())
-	}
+	if ($html && mail($emailto, $subject, $html, $headers)
+		echo 'ok';
 	else
 		echo 'error';
 } else {
